@@ -1,4 +1,4 @@
-package com.example.springfluxsample.domain;
+package com.example.springfluxsample.api;
 
 import com.example.springfluxsample.core.BaseDto;
 import lombok.AllArgsConstructor;

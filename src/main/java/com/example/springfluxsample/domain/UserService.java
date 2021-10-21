@@ -1,4 +1,4 @@
-package com.example.springfluxsample.data;
+package com.example.springfluxsample.domain;
 
 import java.util.List;
 
@@ -8,6 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.example.springfluxsample.core.BaseRepository;
 import com.example.springfluxsample.core.BaseService;
+import com.example.springfluxsample.data.User;
 import lombok.extern.slf4j.Slf4j;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
