@@ -1,5 +1,8 @@
 package com.example.springfluxsample.data;
 
+import javax.persistence.Entity;
+import javax.persistence.UniqueConstraint;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Table;
 
@@ -11,13 +14,13 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Data
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Table("users")
 @EqualsAndHashCode(callSuper = true)
+@Entity
 public class User extends BaseEntity<Long> {
 
     private String name;
