@@ -1,0 +1,14 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/springtest
+    username: sujin
+    password: 123456
+
+server:
+  port: 8080
+  error:
+    whitelabel:
+      enabled: false
+    include-message: always
