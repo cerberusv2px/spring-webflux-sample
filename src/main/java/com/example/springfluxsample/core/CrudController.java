@@ -59,6 +59,21 @@ public abstract class CrudController<E extends BaseEntity, D, I> {
 
     @GetMapping("")
     public Flux<D> findAll() {
+//        ResponseEntity<Object> o = null;
+//        Flux<D> e = service.findAll().map(mapper::mapEntityToDto);
+//        e.map(data -> data).subscribe(d -> {
+//
+//        })
+////        e.subscribe(data -> {
+////           final ResponseEntity<Object> o = ResponseHandler.generateResponse("success", HttpStatus.OK, data);
+////
+////        }, error -> {
+////            o = ResponseHandler.generateResponse("failre", HttpStatus.NOT_FOUND, null);
+////        });
+////        return o;
+//        //return e.map(ResponseEntity::ok).defaultIfEmpty(ResponseEntity.notFound().build());
+//       // return e;
+//        return null;
         return service.findAll().map(mapper::mapEntityToDto);
     }
 
@@ -68,5 +83,4 @@ public abstract class CrudController<E extends BaseEntity, D, I> {
             .map(r -> ResponseEntity.ok().<Void>build())
             .defaultIfEmpty(ResponseEntity.notFound().build());
     }
-
 }

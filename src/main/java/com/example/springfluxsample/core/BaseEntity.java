@@ -1,21 +1,19 @@
 package com.example.springfluxsample.core;
 
 import java.io.Serializable;
-
-import javax.persistence.EntityListeners;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
-
-import lombok.Data;
+import javax.persistence.SequenceGenerator;
 
 @MappedSuperclass
 public abstract class BaseEntity<T extends Serializable> {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @org.springframework.data.annotation.Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequenceGenerator")
+    @SequenceGenerator(name = "sequenceGenerator")
     private T id;
 
     public T getId() {

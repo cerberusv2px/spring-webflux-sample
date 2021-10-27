@@ -19,3 +19,10 @@ server:
     whitelabel:
       enabled: false
     include-message: always
+
+
+cloudhub:
+  security:
+    jwt:
+      base64-secret: HAs3nyqKJ59UfoZfVyJpXjCkPif1KNEOqS89KC02mvjnkBjveWnq/haFZJsEqY2blhHyDilQQq75CuB5BtXNM8IfZScxgSyt4Ax193fJ8AepODnmmua1v2wH7OuVapv2RB8JD/VNAepzK6krj3VCNu+GsiYaX+Xj/U2go0ORORefYyqpJmhE+BtKwYAGhzSnIAjc/FCDfEhCYE57AyHy99DEvrJLPQExf9bxflOcHGMURPcm71GbAbgjRCrnZJXpL3a7MetqKz9gxJW5eR/C5ebtfVyf8LE0G9kv5fFVdyY75SPM2uWwVhQ89AKP8hoTeL+0zMm/1F1beQXQFv4v #size must be >= 255 bits
+

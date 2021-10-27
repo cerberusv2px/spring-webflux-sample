@@ -8,13 +8,12 @@ import com.example.springfluxsample.core.CrudController;
 import com.example.springfluxsample.core.Service;
 import com.example.springfluxsample.data.User;
 
-@RestController
-@RequestMapping("/users")
-public class UserController extends CrudController<User, UserDto, Long> {
-
-    protected UserController(
-        Service<User, Long> service,
-        BaseMapper<User, UserDto> mapper) {
-        super(service, mapper);
-    }
-}
+//@RestController
+//@RequestMapping("/users")
+//public class UserController extends CrudController<User, UserDTO, Long> {
+//
+//    protected UserController(
+//        Service<User, Long> service) {
+//        super(service, null);
+//    }
+//}
